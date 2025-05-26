@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+    margin: 0 auto;
+    width: 1128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    list-style: none;
+    gap: 20px 24px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex-basis: calc((100% - 48px) / 3);
+}
+
+.gallery-image {
+    width: 360px;
+    height: 240px
+}
+
+.gallery-image {
+    scale: 1;
+    transition: scale, cubic-bezier(0.4, 0, 0.2, 1), 250ms;
+    cursor: url(../other/custom-pointer.png), auto;
+}
+
+.gallery-link:hover .gallery-image,
+.gallery-link:focus .gallery-image{
+    scale: 1.1;
+}
